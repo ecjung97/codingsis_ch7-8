@@ -32,6 +32,7 @@
 .main-text {
   font-size: 1.5rem;
 }
+
 .sub-text {
   font-size: 0.625rem;
 }
@@ -90,6 +91,19 @@
 .video-container {
   height: 100%;
   width: 100%;
+  position: relative;
+}
+
+.btn-cont {
+  position: absolute;
+  bottom: 50px;
+  left: 500px;
+  padding: 10px;
+  cursor: pointer;
+  & button {
+    border: none;
+    background: transparent;
+  }
 }
 
 video {

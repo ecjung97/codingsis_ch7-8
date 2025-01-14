@@ -84,7 +84,13 @@
               tabindex="-1"
               autoplay
               muted="muted"
+              id="myVideo"
             ></video>
+          </div>
+          <div class="btn-cont">
+            <button type="button" id="muteButton">
+              <img src="./resources/volume-mute.svg" />
+            </button>
           </div>
           <div class="carousel-caption d-none d-md-block"></div>
         </div>
@@ -402,5 +408,20 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document
+        .getElementById("muteButton")
+        .addEventListener("click", function () {
+          var video = document.getElementById("myVideo");
+          var img = this.querySelector("img");
+          if (video.muted) {
+            video.muted = false;
+            img.src = "./resources/volume-up.svg";
+          } else {
+            video.muted = true;
+            img.src = "./resources/volume-mute.svg";
+          }
+        });
+    </script>
   </body>
 </html>
